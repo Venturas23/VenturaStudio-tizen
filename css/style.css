@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    margin: 0;
+    font-family: "K2D", sans-sefif;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+header {
+    background-color: #141414;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#categoriasContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 2rem;
+    margin: 5vh;
+}
+
+.categoria {
+	transition:border-color 0.3s ease;
+    outline: none;
+    scroll-behavior: smooth;
+    border: 10px solid transparent;
+    border-radius:1 vw;
+}
+.categoria:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1); /* Destaque no fundo */
+    border: 2px solid #e50914; /* Borda vermelha */
+    border-radius: 1vw;
+}
+
+.titulo-categoria {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+.carrossel {
+    display: flex;
+    gap: 1rem;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 50px;
+    transition: scroll-behavior 0.3s ease;
+}
+
+.item-filme {
+	 transition: transform 0.3s ease, border-color 0.3s ease;
+    flex: 0 0 auto;
+    width: 180px;
+    height: 270px;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 5px solid transparent;
+    border-radius: 1vw;
+    z-index:1;
+    transform:scale(1);
+}
+
+.item-filme:focus {
+    border-color: #e50914;
+    outline: none;
+    z-index:10;
+    transform: scale(1.1);
+}
+
+.item-filme img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 1vw;
+}
+#avplayContainer {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1000;
+    transition: opacity 0.3s ease; /* Transição suave */
+}
+
+#avplayContainer.show {
+    display: block;
+    opacity: 1;
+}
+
